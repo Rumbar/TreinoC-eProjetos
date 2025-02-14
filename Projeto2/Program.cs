@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Security.AccessControl;
 namespace course
 {
     class Program{ 
@@ -11,6 +12,9 @@ namespace course
             //aula6();
             //exercicio1();
             //aula7();
+            //OperadoresLogicos();
+            EstruturaCondicional();
+
 
         }
 
@@ -186,6 +190,56 @@ namespace course
 
 
         }
+
+        public static void OperadoresLogicos(){
+            // ! > && >||
+            //pode se usar parentesis 
+
+            bool c1 = !(2>3) && 4 != 5; // O NÃO NEGA A FALSIDADE DO 2>3 O QUE DEIXA A SENTENÇA COMO VERDADE
+            bool c2 = 2>3 || 4 != 5;
+
+            Console.WriteLine(c1);
+            Console.WriteLine(c2);
+            Console.WriteLine("--------------");
+
+            bool c3 = 10 < 5;
+            bool c4 = c1 || c2 && c3;
+            Console.WriteLine(c4);
+
+        }
+
+        public static void EstruturaCondicional()
+        {
+            //Console.WriteLine("Entre com um numero inteiro");
+            //int numero = int.Parse(Console.ReadLine());
+
+            // if (numero % 2 == 0)
+            //{
+            // Console.WriteLine("Par!");
+            // }
+
+            // else 
+            // { 
+            //Console.WriteLine("Impar!"); 
+            //}
+
+            Console.WriteLine("Qual a hora atual ?!");
+            double hora = double.Parse(Console.ReadLine());
+
+            if (hora < 12)
+                Console.WriteLine("Bom dia!");
+            else if (hora < 18)
+                Console.WriteLine("Boa tarde");
+            else 
+                Console.WriteLine("Boa noite");
+
+  
+        }
+
+
+
+
+
 
 
     }
